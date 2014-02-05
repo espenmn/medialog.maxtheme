@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" purge="false">
+ <index name="e_post" meta_type="FieldIndex">
+  <indexed_attr value="e_post"/>
+ </index>
+ <index name="kontaktlaerer" meta_type="FieldIndex">
+  <indexed_attr value="kontaktlaerer"/>
+ </index>
+ <index name="mobil" meta_type="FieldIndex">
+  <indexed_attr value="mobil"/>
+ </index>
+ <index name="fag" meta_type="FieldIndex">
+  <indexed_attr value="fag"/>
+ </index>
+ <column value="e_post"/>
+ <column value="mobil"/>
+ <column value="fag"/>
+ <column value="kontaktlaerer"/>
+</object>

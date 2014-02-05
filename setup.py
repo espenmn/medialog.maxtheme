@@ -29,6 +29,7 @@ setup(name='medialog.maxtheme',
           'wildcard.foldercontents',
           'medialog.portlet.placeholder',
           'medialog.qrcode',
+          'plone.app.contenttypes',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

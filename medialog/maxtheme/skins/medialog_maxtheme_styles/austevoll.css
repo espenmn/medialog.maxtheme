@@ -705,6 +705,41 @@ p.discreet {
 	color: #777;
 }
 
+.ansatt {
+margin-top: 22px;
+}
+.ansatt p {
+font-size: 100%;
+margin-top: 9px;
+}
+.template-ledelse_view span.ansatt {
+border:  1px solid #AAA;
+padding: 13px 15px 0;
+border-radius: 6px;
+display: block;
+float: left;
+width: 70%;
+}
+
+
+div.leadImage {
+float: left;
+padding-right: 25px;
+background: white;
+margin-bottom: 15px;
+}
+
+.template-ledelse_view .ledertekst {
+ float:  left;
+}
+
+#content-core span  div.leadImage {
+	float: left;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+
 /* */
 
 /* */

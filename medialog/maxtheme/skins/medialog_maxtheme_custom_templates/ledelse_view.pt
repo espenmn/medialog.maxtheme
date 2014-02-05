@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+    <metal:content-core fill-slot="content-core">
+        <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
+            <metal:entries fill-slot="entries">
+			<div metal:use-macro="context/batch_macros/macros/navigation" />
+             <span>
+                    <metal:block use-macro="context/folder_listing/macros/entries">
+                        <metal:entry fill-slot="entry">
+            			<span class="ansatt">
+          					<div class="leadImage"  >
+                                <img src="" alt=""
+                                     tal:attributes="src string:${item/getURL}/@@images/image/thumb" />
+        					</div>
+        					<div class="ledertekst">
+           						<h1 tal:content="item/Title" class="documentFirstHeading">
+               						Title or id
+           						</h1>
+ 								<div class="documentDescription description"
+                					tal:content="item/Description"
+                					tal:define="have_at exists:context/getField"
+                					tal:condition="python:context.Description() and not have_at">
+               						Description
+           						</div>
+								<p><strong class="sort">Mobil: </strong>
+									<span tal:define="mobil python:str(item.mobil); 
+											nomobil python:  mobil[:3] + ' ' + mobil[3:5] + ' ' + mobil[5:]" 
+											tal:content="nomobil" /></p>
+      							<p><strong class="sort">E-post: </strong>
+      								 <span tal:content="item/e_post" /></p>
+      							<p tal:condition="item/fag">
+      								<strong class="sort">Fag: </strong>
+      								 <span tal:content="item/fag" />
+      							</p>
+      							<p><strong class="sort">Rolle: </strong> 
+      								<span tal:content="item/kontaktlaerer" /> 
+      							</p>
+      						</div>
+     					</span>
+                    </metal:entry>
+				</metal:block>
+            </span>
+	        </metal:entries>
+        </metal:block>
+        <metal:subtopics use-macro="context/atct_topic_view/macros/folderlisting_macro" />
+    </metal:content-core>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+    <metal:content-core fill-slot="content-core">
+      <span class="ansatt">
+
+<div class="leadImage" tal:condition="exists: context/@@images/image" >
+  <img tal:define="scale context/@@images"
+       tal:replace="structure python: scale.scale('image', width=200, height=200).tag(css_class='newsImage')" />
+</div>
+        
+           <h1 tal:content="context/Title" class="documentFirstHeading">
+               Title or id
+           </h1>
+ 
+           <div class="documentDescription description"
+                tal:content="context/Description"
+                tal:define="have_at exists:context/getField"
+                tal:condition="python:context.Description() and not have_at">
+               Description
+           </div>
+
+      <p><strong class="sort">telefon: </strong>
+      <span tal:define="mobil python:str(context.mobil); nomobil python:  mobil[:2] + ' ' + mobil[2:4] + ' ' + mobil[4:6] + ' ' + mobil[6:]" tal:content="nomobil" /></p>
+      <p><strong class="sort">E-post: </strong> <span tal:content="context/e_post" /></p>
+      <p tal:condition="context/fag"><strong class="sort">Fag: </strong> <span tal:content="context/fag" /></p>
+      <p><strong class="sort">Rolle: </strong> <span tal:content="context/kontaktlaerer" /> </p>
+     </span>
+    </metal:content-core>
+</body>
+</html>
