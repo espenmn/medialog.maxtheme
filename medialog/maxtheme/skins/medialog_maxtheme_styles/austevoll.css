@@ -947,8 +947,6 @@ width: 100%;
 	text-indent: 24px;
 }
 
-
-
 .portletFooter a {
 	background-image: url(pil_meny.png);
 	background-repeat: no-repeat;
@@ -968,9 +966,10 @@ width: 100%;
 	padding: 9px 20px 6px;
 	color: #f1f7f9;
 	clear: both;
-	margin: 0;
+	margin: 0 0 34px;
 	font-size: 90%;
 }
+
 
 #portal-footer  a:visited {
 	color: #dadcde;
