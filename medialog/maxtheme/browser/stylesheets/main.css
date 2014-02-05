@@ -947,6 +947,8 @@ width: 100%;
 	text-indent: 24px;
 }
 
+
+
 .portletFooter a {
 	background-image: url(pil_meny.png);
 	background-repeat: no-repeat;
@@ -983,6 +985,14 @@ width: 100%;
 	text-decoration: none;
 	color: #e4bd6f;
 }
+
+#portal-colophon div.colophonWrapper p a {
+	color:  whitesmoke;
+}
+#portal-colophon div.colophonWrapper p a:hover {
+	color: #faf4cd;
+}
+
 
 
 #headerTopRow {
