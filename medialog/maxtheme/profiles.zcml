@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="medialog.maxtheme">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Maxtheme"
+      directory="profiles/default"
+      description='Installs "Medialog Maxtheme".'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="medialog.maxtheme.variuous"
+      title="Maxtheme Theme: miscellaneous import steps"
+      description="Vaxous import steps that are not handled by GS import/export handlers."
+      handler="medialog.maxtheme.setuphandlers.setupVaxous">
+    <depends name="skins"/>
+  </genericsetup:importStep>
+
+</configure>
