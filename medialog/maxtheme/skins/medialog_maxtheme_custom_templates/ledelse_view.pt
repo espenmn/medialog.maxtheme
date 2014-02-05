@@ -30,9 +30,9 @@
                 					tal:condition="python:context.Description() and not have_at">
                						Description
            						</div>
-								<p><strong class="sort">Mobil: </strong>
+								<p><strong class="sort">Telefon: </strong>
 									<span tal:define="mobil python:str(item.mobil); 
-											nomobil python:  mobil[:3] + ' ' + mobil[3:5] + ' ' + mobil[5:]" 
+											nomobil python:  mobil[:2] + ' ' + mobil[2:4] + ' ' + mobil[4:6] + ' ' + mobil[6:]" 
 											tal:content="nomobil" /></p>
       							<p><strong class="sort">E-post: </strong>
       								 <span tal:content="item/e_post" /></p>

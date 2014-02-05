@@ -22,6 +22,14 @@ body {
 	margin-top: -2px;
 }
 
+div.slider-wrapper.nivoslidertheme_default {
+	overflow:hidden;
+}
+
+body.template-galleryview.portaltype-folder  #portal-column-content  {
+	padding-right: 0;
+	margin-right: 0;
+}
 /* */
 
 #portal-top {
