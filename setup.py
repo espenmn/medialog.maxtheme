@@ -15,7 +15,7 @@ setup(name='medialog.maxtheme',
         "Programming Language :: Python",
         ],
       keywords='Plone Theme Maxtheme',
-      author='EMN',
+      author='Espen Moe-Nilssen',
       author_email='espen@medialog.no',
       url='http://github.com/espenmn/medialog.maxtheme',
       license='GPL',
@@ -25,11 +25,24 @@ setup(name='medialog.maxtheme',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'plonetheme.classic',
-          'wildcard.foldercontents',
+    	  'collective.portlet.itemview'
+          'collective.ptg.nivoslider'
+          'collective.ptg.tile',
+    	  'collective.vaporisation',
+          'medialog.hidetitle',
+    	  'medialog.imageexport',
+          'medialog.issuu',
+          'medialog.newsitemview',
           'medialog.portlet.placeholder',
           'medialog.qrcode',
           'plone.app.contenttypes',
+          'plonetheme.classic',
+          'Products.Maps',
+          'redturtle.smartlink',
+          'sc.social.like',
+          'wildcard.foldercontents',
+          
+          
           # -*- Extra requirements: -*-
       ],
       entry_points="""
