@@ -2,8 +2,7 @@
 <object name="ansatt" meta_type="Dexterity FTI" i18n:domain="plone"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="title" i18n:translate="">Ansatt</property>
- <property name="description"
-    i18n:translate="">En ansatt</property>
+ <property name="description" i18n:translate="">En ansatt</property>
  <property name="icon_expr">string:${portal_url}/document_icon.png</property>
  <property name="factory">ansatt</property>
  <property name="add_view_expr">string:${folder_url}/++add++ansatt</property>
@@ -39,6 +38,18 @@
         &lt;description/&gt;
         &lt;title&gt;E-post&lt;/title&gt;
       &lt;/field&gt;
+      &lt;field name="avdeling" type="zope.schema.Set"&gt;
+        &lt;description/&gt;
+        &lt;title&gt;Avdeling&lt;/title&gt;
+        &lt;value_type type="zope.schema.Choice"&gt;
+          &lt;values&gt;
+            &lt;element&gt;Fellesfag&lt;/element&gt;
+            &lt;element&gt;Yrkesfag&lt;/element&gt;
+            &lt;element&gt;Administrasjon&lt;/element&gt;
+            &lt;element&gt;Kantine&lt;/element&gt;
+          &lt;/values&gt;
+        &lt;/value_type&gt;
+      &lt;/field&gt;
       &lt;field name="fag" type="zope.schema.Text"&gt;
         &lt;description&gt;Fag, separert med komma&lt;/description&gt;
         &lt;required&gt;False&lt;/required&gt;
@@ -46,7 +57,6 @@
       &lt;/field&gt;
       &lt;field name="kontaktlaerer" type="zope.schema.TextLine"&gt;
         &lt;description/&gt;
-        &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;Rolle&lt;/title&gt;
       &lt;/field&gt;
     &lt;/schema&gt;

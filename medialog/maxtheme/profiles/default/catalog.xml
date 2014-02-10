@@ -3,6 +3,9 @@
  <index name="e_post" meta_type="FieldIndex">
   <indexed_attr value="e_post"/>
  </index>
+  <index name="avdeling" meta_type="KeywordIndex">
+  <indexed_attr value="avdeling"/>
+ </index>
  <index name="kontaktlaerer" meta_type="FieldIndex">
   <indexed_attr value="kontaktlaerer"/>
  </index>
@@ -16,4 +19,5 @@
  <column value="mobil"/>
  <column value="fag"/>
  <column value="kontaktlaerer"/>
+  <column value="avdeling"/>
 </object>

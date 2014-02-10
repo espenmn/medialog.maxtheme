@@ -5,5 +5,6 @@
     <dependency>profile-medialog.portlet.placeholder:default</dependency>
    <dependency>profile-medialog.qrcode:default</dependency>
 	<dependency>profile-wildcard.foldercontents:default</dependency>
+	<dependency>profile-plone.app.dexterity:default</dependency>
   </dependencies>
 </metadata>
