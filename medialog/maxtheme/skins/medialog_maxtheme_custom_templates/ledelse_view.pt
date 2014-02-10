@@ -17,13 +17,17 @@
                         <metal:entry fill-slot="entry">
             			<span class="ansatt">
           					<div class="leadImage"  >
+          					    <a href="" tal:attributes="href string:${item/getURL}">
                                 <img src="" alt=""
                                      tal:attributes="src string:${item/getURL}/@@images/image/thumb" />
+                                </a>
         					</div>
         					<div class="ledertekst">
-           						<h1 tal:content="item/Title" class="documentFirstHeading">
-               						Title or id
-           						</h1>
+        						<a href="" tal:attributes="href string:${item/getURL}">
+           							<h1 tal:content="item/Title" class="documentFirstHeading">
+               							Title or id
+           							</h1>
+           						</a>
  								<div class="documentDescription description"
                 					tal:content="item/Description"
                 					tal:define="have_at exists:context/getField"
@@ -35,7 +39,8 @@
 											nomobil python:  mobil[:2] + ' ' + mobil[2:4] + ' ' + mobil[4:6] + ' ' + mobil[6:]" 
 											tal:content="nomobil" /></p>
       							<p><strong class="sort">E-post: </strong>
-      								 <span tal:content="item/e_post" /></p>
+      								 <a href="mailto" tal:define="epost item/e_post"
+      								  		  tal:attributes="href python:'mailto:' + epost"><span tal:content="item/e_post" /></a></p>
       							<p tal:condition="item/fag">
       								<strong class="sort">Fag: </strong>
       								 <span tal:content="item/fag" />

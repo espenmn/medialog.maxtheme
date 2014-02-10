@@ -26,6 +26,15 @@ div.slider-wrapper.nivoslidertheme_default {
 	overflow:hidden;
 }
 
+div#slider-container.slider-navtype-bullets-only {
+	margin-bottom: 20px;
+}
+
+div#viewlet-below-content  .slider-navtype-bullets-only {
+	margin-top: 20px;
+}
+
+
 body.template-galleryview.portaltype-folder  #portal-column-content  {
 	padding-right: 0;
 	margin-right: 0;
@@ -143,9 +152,10 @@ form.searchPage input.searchButton {
 	padding: 0 5px;
 	list-style: none;
 	float: left;
-	margin-top: 62px;
-	margin-left: 200px;
-	margin-bottom: 10px;
+	clear: left;
+	margin-top: -6px;
+	margin-left: 113px;
+	margin-bottom: 15px;
 }
 
 #portal-globalnav li a {
@@ -298,7 +308,6 @@ form.searchPage input.searchButton {
 
 #portal-column-content {
 	padding: 20px;
-	background: #FFF;
 	min-width: 492px;
 }
 
@@ -307,6 +316,54 @@ body.template-search #portal-column-content {
 }
 
 /* */
+
+span.boks {
+	width: 300px;
+	height: 240px;
+	overflow:hidden;
+	display: block;
+	margin-right: 16px;
+	float: left;
+}
+
+span.boks:nth-child(2) {
+	margin-right:  0 !important;
+	float: right;
+}
+ 
+div.bokstittel {
+	display: block;
+	width: auto;
+	height:32px;
+	padding: 4px 15px 8px;
+	outline: none;
+	text-decoration: none;
+	-webkit-border-radius: 6px 0 6px 0;
+	-moz-border-radius: 6px 0 6px 0;
+	border-radius: 6px 0 6px 0;
+	background: #c42329;
+	-webkit-transition-duration: 0.20s;
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-duration: 0.20s;
+	-moz-transition-timing-function: ease-out;
+	}
+	
+span.boksdescription,
+.bokstittel h1 {
+	color: white;
+	float: left;
+	border-bottom: 0;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+span.boksdescription  {
+	font-weight: normal;
+	line-height: 33px;
+	float: right;
+}
+
 
 /* */
 
@@ -630,6 +687,14 @@ img.image-left {
 	margin: 2px 10px 10px 0;
 }
 
+#slider   img.image-left {
+	margin:  0 30px 0 0;
+}
+
+
+#slider   img.image-right {
+	margin:  0 0 0 30px;
+}
 img.image-right {
 	float: right;
 	margin: 2px 0px 10px 10px;
@@ -747,6 +812,9 @@ margin-bottom: 15px;
 	display: inline-block;
 }
 
+ div.ledertekst a {
+	text-decoration: none;
+}
 
 /* */
 

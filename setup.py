@@ -25,8 +25,8 @@ setup(name='medialog.maxtheme',
       zip_safe=False,
       install_requires=[
           'setuptools',
-    	  'collective.portlet.itemview'
-          'collective.ptg.nivoslider'
+    	  'collective.portlet.itemview',
+          'collective.ptg.nivoslider',
           'collective.ptg.tile',
     	  'collective.vaporisation',
           'medialog.hidetitle',
