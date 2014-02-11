@@ -70,7 +70,7 @@
     text-align: right;
     text-transform: lowercase;
     padding: 0 0 0 1em;
-    z-index: 2;
+    z-index: 4;
     position:relative;
     height: 1.6em;
 }
@@ -85,7 +85,7 @@
 }
 .contentActions li {
     float: right;
-    z-index: 4;
+    z-index: 6;
     border-left: 1px solid #999999;
 }
 .contentActions a {
