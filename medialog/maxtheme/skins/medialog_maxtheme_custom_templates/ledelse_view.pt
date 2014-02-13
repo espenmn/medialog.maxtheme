@@ -15,7 +15,7 @@
              <span>
                     <metal:block use-macro="context/folder_listing/macros/entries">
                         <metal:entry fill-slot="entry">
-            			<span class="ansatt">
+            			<span class="ansatt" tal:condition="python: item.portal_type == 'ansatt'">
           					<div class="leadImage"  
           						  tal:define="source string:${item/getURL}/@@images/image/thumb" >
           					    <a href="" tal:attributes="href string:${item/getURL}">
