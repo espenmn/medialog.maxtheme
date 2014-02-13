@@ -16,10 +16,11 @@
                     <metal:block use-macro="context/folder_listing/macros/entries">
                         <metal:entry fill-slot="entry">
             			<span class="ansatt">
-          					<div class="leadImage"  >
+          					<div class="leadImage"  
+          						  tal:define="source string:${item/getURL}/@@images/image/thumb" >
           					    <a href="" tal:attributes="href string:${item/getURL}">
                                 <img src="" alt=""
-                                     tal:attributes="src string:${item/getURL}/@@images/image/thumb" />
+                                     tal:attributes="src source" />
                                 </a>
         					</div>
         					<div class="ledertekst">
@@ -47,6 +48,13 @@
       							</p>
       							<p><strong class="sort">Rolle: </strong> 
       								<span tal:content="item/kontaktlaerer" /> 
+      							</p>
+      							<p tal:condition="item/avdeling" >
+      							   <strong class="sort">Avdeling(er): </strong> 
+      							   <span tal:define="avdeling python:list(item.avdeling);
+      							   		 sorted_avd python: avdeling.sort(); 
+      									 avdelinger python:', '.join(avdeling)" 
+      									 tal:content="avdelinger" /> 
       							</p>
       						</div>
      					</span>
