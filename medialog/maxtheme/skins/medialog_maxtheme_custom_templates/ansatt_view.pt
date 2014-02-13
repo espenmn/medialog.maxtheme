@@ -31,10 +31,11 @@
       <p><strong class="sort">E-post: </strong> <span tal:content="context/e_post" /></p>
       <p tal:condition="context/fag"><strong class="sort">Fag: </strong> <span tal:content="context/fag" /></p>
       <p><strong class="sort">Rolle: </strong> <span tal:content="context/kontaktlaerer" /> </p>
-      <p><strong class="sort">Avdeling(er): </strong> 
-      		<span tal:define="avdeling python:list(context.avdeling); 
+      <p tal:define="avdeling python:list(context.avdeling); 
       				sorted_avd python: avdeling.sort(); 
-      				avdelinger python:', '.join(avdeling)" 
+      				avdelinger python:', '.join(avdeling)">
+      		<strong><span class="sort">Avdeling</span><span tal:condition="python:len(avdeling)>= 2 ">(er)</span>: </strong> 
+      		<span 
       				tal:content="avdelinger" /> </p>
      </span>
     </metal:content-core>

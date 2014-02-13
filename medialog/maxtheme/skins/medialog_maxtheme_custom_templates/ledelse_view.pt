@@ -49,13 +49,15 @@
       							<p><strong class="sort">Rolle: </strong> 
       								<span tal:content="item/kontaktlaerer" /> 
       							</p>
-      							<p tal:condition="item/avdeling" >
-      							   <strong class="sort">Avdeling(er): </strong> 
-      							   <span tal:define="avdeling python:list(item.avdeling);
+      							<tal:avdeling tal:condition="item/avdeling" >
+      							<p tal:define="avdeling python:list(item.avdeling);
       							   		 sorted_avd python: avdeling.sort(); 
-      									 avdelinger python:', '.join(avdeling)" 
-      									 tal:content="avdelinger" /> 
+      									 avdelinger python:', '.join(avdeling)">
+      							   <strong>Avdeling<span tal:condition="python:len(avdeling)>=2">er</span> 
+      							   :</strong> 
+      							   <span tal:content="avdelinger" /> 
       							</p>
+      							</tal:avdeling>
       						</div>
      					</span>
                     </metal:entry>
