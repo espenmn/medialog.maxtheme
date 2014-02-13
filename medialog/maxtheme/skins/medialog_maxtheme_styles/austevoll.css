@@ -39,7 +39,13 @@ body.template-galleryview.portaltype-folder  #portal-column-content  {
 	padding-right: 0;
 	margin-right: 0;
 }
-/* */
+#viewlet-social-like {
+	padding-bottom: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #909090;
+	margin-bottom: 16px;
+}
 
 #portal-top {
 	width: 100%;
@@ -794,6 +800,28 @@ float: left;
 width: 70%;
 }
 
+div.folk {
+	display: inline-block;
+	width: 270px;
+	float: left;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border:  1px solid silver;
+	padding: 10px;
+}
+
+div.folk a {
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+}
+
+div.folk  .epost{
+ 	clear:  both;
+	text-decoration: none;
+}
+
 
 div.leadImage {
 float: left;
@@ -826,18 +854,17 @@ table td {
 
 table.listing,
 .stx table {
-
-
-/* */
-
-/* */
-border-spacing: 0;
+	border-spacing: 0;
 	border: solid 1px #d7d4cd !important;
 	margin: 1em 0em 1em 0em;
 	width: 99%;
 	font-size: 11px;
 	background: white;
 	padding: 1px
+}
+
+table.listing.tilsatte {
+	width: 930px;
 }
 
 #parent-fieldname-text-ceffd4a12b074e8a9d1c1eb943b4c745 table.listing tbody {

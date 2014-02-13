@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+    <metal:content-core fill-slot="content-core">
+        <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
+            <metal:entries fill-slot="entries">
+			<div metal:use-macro="context/batch_macros/macros/navigation" />
+
+                    <metal:block use-macro="context/folder_listing/macros/entries">
+                        <metal:entry fill-slot="entry">
+            			<div class="folk">
+          					<div class="leadImage"  >
+          					    <a href="" tal:attributes="href string:${item/getURL}">
+                                <img src="" alt="" size="75"
+                                     tal:attributes="src string:${item/getURL}/@@images/image/thumb" />
+                                </a>
+        					</div>
+        					<div class="folktekst">
+        						<a href="" tal:attributes="href string:${item/getURL}">
+           							<h2 tal:content="item/Title" >
+               							Title or id
+           							</h2>
+           						</a>
+ 							    <p> 
+      								<span tal:content="item/kontaktlaerer" /> 
+      							</p>
+								<p><strong class="sort">T: </strong>
+									<span tal:define="mobil python:str(item.mobil); 
+											nomobil python:  mobil[:2] + ' ' + mobil[2:4] + ' ' + mobil[4:6] + ' ' + mobil[6:]" 
+											tal:content="nomobil" /></p>
+      							<p class="epost"><strong class="sort">E-post: </strong>
+      								 <a href="mailto" tal:define="epost item/e_post"
+      								  		  tal:attributes="href python:'mailto:' + epost"><span tal:content="item/e_post" /></a></p>
+      							<p tal:condition="item/fag">
+      								<strong class="sort">Fag: </strong>
+      								 <span tal:content="item/fag" />
+      							</p>
+
+      						</div>
+     					</div>
+                    </metal:entry>
+				</metal:block>
+ 
+	        </metal:entries>
+        </metal:block>
+        <metal:subtopics use-macro="context/atct_topic_view/macros/folderlisting_macro" />
+    </metal:content-core>
+</body>
+</html>
