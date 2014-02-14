@@ -1,5 +1,4 @@
-/* @override http://localhost:8080/Plone/portal_css/Maxtheme%20Theme/austevoll.css */
-
+ 
 div.portletStaticText.portlet-static-fylkekommunebar {
 	width: 982px;
 	margin: auto;
@@ -1366,7 +1365,7 @@ div#topportlets.visualClear {
 		float:  left;
 	}
 	
-	
+	div#slider-container,
 	#topportlets,
  	#portal-column-two,
  	body #portal-globalnav,
