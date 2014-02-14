@@ -15,8 +15,10 @@
              <span>
                     <metal:block use-macro="context/folder_listing/macros/entries">
                         <metal:entry fill-slot="entry">
-                        <a href="#"  > 
-            			<span class="boks">
+            			<span class="boks" 
+            					tal:condition="item/remote_url">
+            			   <a href="#" tal:attributes="href item/remote_url"
+               				           tal:content="context/remote_url"> 
         					<div class="bokstittel">
            						<span><h1 tal:content="item/Title">
                						Title or id
@@ -31,8 +33,8 @@
                                 <img src="" alt=""
                                      tal:attributes="src string:${item/getURL}/@@images/image/preview" />
         					</div>
+        				  </a>
      					</span>
-     					</a>
                     </metal:entry>
 				</metal:block>
             </span>
