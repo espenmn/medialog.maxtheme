@@ -836,6 +836,12 @@ background: white;
 margin-bottom: 15px;
 }
 
+#content-core span span.boks a div.leadImage {
+	margin: 0 ;
+	padding: 0
+} 
+
+
 .template-ledelse_view .ledertekst {
  float:  left;
 }
