@@ -15,8 +15,7 @@
              <span>
                     <metal:block use-macro="context/folder_listing/macros/entries">
                         <metal:entry fill-slot="entry">
-                        <a href="#" tal:attributes="href item/remote_url"
-               				tal:content="context/remote_url"> 
+                        <a href="#"  > 
             			<span class="boks">
         					<div class="bokstittel">
            						<span><h1 tal:content="item/Title">
