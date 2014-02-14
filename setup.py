@@ -42,6 +42,7 @@ setup(name='medialog.maxtheme',
           'redturtle.smartlink',
           'sc.social.like',
           'wildcard.foldercontents',
+          'ftw.mobilenavigation',
           
           
           # -*- Extra requirements: -*-

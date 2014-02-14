@@ -1,3 +1,5 @@
+/* @override http://localhost:8080/Plone/portal_css/Maxtheme%20Theme/austevoll.css */
+
 div.portletStaticText.portlet-static-fylkekommunebar {
 	width: 982px;
 	margin: auto;
@@ -686,6 +688,10 @@ input {
 
 img {
 	border: 0px;
+ 
+}
+#content img {
+	max-width: 100%
 }
 
 img.image-left {
@@ -1221,3 +1227,148 @@ div#topportlets.visualClear {
 #nextBtn, #prevBtn {
    display: none !important;
 }
+
+
+@media screen and (max-width: 768px) {
+
+	#portal-globalnav.mobileNavigation{
+		margin: 0;
+ 
+	}
+	#portal-globalnav.mobileNavigation li{
+		margin: 0;
+		width: 100%;
+ 
+ 
+	}
+	body #portal-globalnav.mobileNavigation li a {
+	 		border-radius: 0;
+	 		background: #123456;
+	 		font-size: 130%;
+	 		border-color:  white;
+	}
+	 
+	
+	ul.mobileButtons {
+		margin:  0;
+		padding: 0;
+	}
+		
+	ul.mobileButtons li {
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+	ul.mobileButtons li a {
+		padding-top: 8px;
+ 
+	}
+	
+	#portal-column-two  {
+	display: none;
+	}
+
+	#content-core,
+	#portal-columns tbody,
+	#portal-columns,
+	#visual-portal-wrapper {
+		max-width: 100%;
+	}
+	
+	body #portal-searchbox {
+	height: 70px;
+	margin-top: 0 ;
+	left:  0;;
+	top: 0;
+	background-color: #123456;
+	}
+
+#LSResult {
+	position: relative;
+	left: 0;
+}
+	
+	.LSBox {
+		font-size: 20px;
+		width: 80%;
+	}
+	
+	body #livesearch0,
+	body input#searchGadget.searchField {
+	width: 100%;
+	margin-top:  10px;;
+	}
+	.livesearchContainer {
+		width: 100%
+	}
+
+
+	
+}
+
+
+@media screen and (max-width: 480px) {
+	
+	h1 {
+	font-size: 160%
+	}
+	body,p, a, ul, ol, li, .documentDescription
+	 	 {
+		line-height: 145%; 
+		font-size: 100%;
+	}
+
+	 	
+	#visual-portal-wrapper,
+	img,
+	#content,
+	#portal-columns tbody,
+	#portal-columns,	
+	div.tileItem.visualIEFloatFix {
+		max-width: 100%!important;
+		overflow-x: hidden;
+ 
+	}
+
+	#content {
+		display: block;
+		margin: 10px;
+	}
+	
+	td#portal-column-content {
+		padding: 10px 10% 2% 2% ;
+		width: 85%;	
+	}
+	
+	#content-core {
+		max-width: 90%;
+	}
+	
+	#portal-columns tbody {
+		padding: 0;
+	}
+	
+	div.tileItem.visualIEFloatFix {
+		padding: 0;
+	}
+
+	img.tileImage,
+	div.tileImage {
+		clear	: both;
+		margin: 0 12px 10px 0;
+		padding: 0;
+		float:  left;
+	}
+	
+	
+	#topportlets,
+ 	#portal-column-two,
+ 	body #portal-globalnav,
+	#portal-logo,
+	#portal-searchbox  {
+		display: none;
+	}  
+	
+ }
+ 
+ 
