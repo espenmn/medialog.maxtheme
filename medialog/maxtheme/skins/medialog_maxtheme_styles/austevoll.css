@@ -1,4 +1,9 @@
- 
+/* @override http://localhost:8080/austevoll/portal_css/Maxtheme%20Theme/austevoll.css */
+
+div.portletStaticText.portlet-static-fylkekommunebar {
+	width: 982px;
+	margin: auto;
+}
 div.portletStaticText.portlet-static-fylkekommunebar {
 	width: 982px;
 	margin: auto;
@@ -69,7 +74,6 @@ body.template-galleryview.portaltype-folder  #portal-column-content  {
 }
 
 #portal-logo {
-	width: 181px;
 	float: left;
 }
 
@@ -325,11 +329,11 @@ body.template-search #portal-column-content {
 /* */
 
 span.boks {
-	width: 300px;
+	width: 32%;
 	height: 240px;
 	overflow:hidden;
 	display: block;
-	margin-right: 16px;
+	margin-right: 2%;
 	float: left;
 }
 
@@ -1236,6 +1240,22 @@ div#topportlets.visualClear {
 
 @media screen and (max-width: 768px) {
 
+	#visual-portal-wrapper,
+	img,
+	#content,
+	#content-core;
+	#portal-columns tbody,
+	#portal-columns,	
+	div.tileItem.visualIEFloatFix {
+		max-width: 100%!important;
+		overflow-x: hidden;
+ 
+	}
+	
+	#slider-container {
+	display: none;
+	}
+
 	#portal-globalnav.mobileNavigation{
 		margin: 0;
  
@@ -1287,11 +1307,12 @@ div#topportlets.visualClear {
 	top: 0;
 	background-color: #123456;
 	}
-
+	
+	
 #LSResult {
 	position: relative;
 	left: 0;
-}
+	}
 	
 	.LSBox {
 		font-size: 20px;
@@ -1313,6 +1334,10 @@ div#topportlets.visualClear {
 
 
 @media screen and (max-width: 480px) {
+
+	#slider-container {
+	display: none;
+	}
 	
 	h1 {
 	font-size: 160%
@@ -1323,6 +1348,18 @@ div#topportlets.visualClear {
 		font-size: 100%;
 	}
 
+ 	span.boks  {
+	width: 100%;
+	margin-bottom: 20px;
+	}
+
+	div.leadImage {
+	width: 100%;
+	padding: 0; 
+	margin: 0;
+	float: left;
+	
+	}
 	 	
 	#visual-portal-wrapper,
 	img,
@@ -1370,7 +1407,6 @@ div#topportlets.visualClear {
 	#topportlets,
  	#portal-column-two,
  	body #portal-globalnav,
-	#portal-logo,
 	#portal-searchbox  {
 		display: none;
 	}  

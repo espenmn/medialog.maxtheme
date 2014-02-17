@@ -21,11 +21,7 @@
         					<div class="bokstittel">
            						<span><h1 tal:content="item/Title">
                						Title or id
-           							</h1>
- 									<span class="boksdescription"
-                						tal:content="item/Description">
-               							Description
-           							</span>
+           							</h1>		
            						</span> 
       						</div>
       						<div class="leadImage"  >
