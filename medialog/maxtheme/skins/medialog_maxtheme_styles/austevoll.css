@@ -1252,8 +1252,10 @@ div#topportlets.visualClear {
 	}
 	
 	#content span.boks {
-	width:  31%;
-	margin-right: 2%;
+		width:  31%;
+		max-width: 220px;
+		float: left;
+		margin:  1%;
 	}
 	
 	
@@ -1360,7 +1362,7 @@ div#topportlets.visualClear {
 		font-size: 100%;
 	}
 
- 	span.boks  {
+ 	#content content-core span.boks  {
 	width: 100%;
 	margin-bottom: 20px;
 	}
