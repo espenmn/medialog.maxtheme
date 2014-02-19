@@ -709,11 +709,12 @@ img.image-left {
 #slider   img.image-right {
 	margin:  0 0 0 30px;
 }
+div.newsImageContainer,
 img.image-right {
 	float: right;
 	margin: 2px 0px 10px 10px;
 }
-
+ 
 
 .slider img.image-right,
 .slider img.image-left {
