@@ -1205,6 +1205,11 @@ div#topportlets.visualClear {
 	color: Black;
 }
 
+#linkKS {
+    background-image: url("ks_systemet.png");
+    cursor: pointer;
+}
+
 #linkSkoleportalen {
 	background-image: url("skoleportalen_icon.gif");
 	cursor: pointer;
